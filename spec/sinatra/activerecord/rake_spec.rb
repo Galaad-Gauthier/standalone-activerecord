@@ -1,9 +1,9 @@
 require 'spec_helper'
-require 'sinatra/activerecord/rake'
+require 'standalone/activerecord/rake'
 require 'fileutils'
 
 describe "Rake tasks" do
-  include Sinatra::ActiveRecordTasks
+  include Standalone::ActiveRecordTasks
 
   def schema_version
     ActiveRecord::Migrator.current_version

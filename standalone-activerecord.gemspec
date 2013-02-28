@@ -1,15 +1,15 @@
 # encoding:utf-8
 
 Gem::Specification.new do |gem|
-  gem.name         = "sinatra-activerecord"
-  gem.version      = "1.2.2"
+  gem.name         = "standalone-activerecord"
+  gem.version      = "0.0.1"
 
-  gem.description  = "Extends Sinatra with ActiveRecord helpers."
+  gem.description  = "standalone ActiveRecord helpers."
   gem.summary      = gem.description
-  gem.homepage     = "http://github.com/janko-m/sinatra-activerecord"
+  gem.homepage     = "http://github.com/dougbradbury/standalone-activerecord"
 
-  gem.authors      = ["Blake Mizerany", "Janko Marohnić"]
-  gem.email        = "janko.marohnic@gmail.com"
+  gem.authors      = ["Doug Bradbury", "Blake Mizerany", "Janko Marohnić"]
+  gem.email        = "doug@bradbury.cc"
 
   gem.license      = "MIT"
 
@@ -18,8 +18,6 @@ Gem::Specification.new do |gem|
   gem.test_files   = gem.files.grep(%r{^(test|spec|features)/})
 
   gem.required_ruby_version = ">= 1.9.2"
-
-  gem.add_dependency "sinatra", "~> 1.0"
   gem.add_dependency "activerecord", "~> 3.0"
 
   gem.add_development_dependency "rake"

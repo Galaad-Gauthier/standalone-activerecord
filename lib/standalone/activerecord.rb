@@ -1,9 +1,8 @@
-require 'sinatra/base'
 require 'active_record'
 require 'logger'
 require 'active_support/core_ext/string/strip'
 
-module Sinatra
+module Standalone
   module ActiveRecordHelper
     def database
       settings.database
