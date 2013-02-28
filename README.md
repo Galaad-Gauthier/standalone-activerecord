@@ -1,8 +1,6 @@
-# Sinatra ActiveRecord Extension
+# Standalone ActiveRecord
 
-Extends [Sinatra](http://www.sinatrarb.com/) with extension methods and Rake
-tasks for dealing with an SQL database using the
-[ActiveRecord ORM](https://github.com/rails/rails/tree/master/activerecord).
+Base on the [Sinatra ActiveRecord Gem](https://github.com/janko-m/standalone-activerecord)
 
 ## Setup
 
@@ -10,36 +8,36 @@ Put it in your `Gemfile`, along with the adapter of your database. For
 simplicity, let's assume you're using SQLite:
 
 ```ruby
-gem "sinatra-activerecord"
+gem "standalone-activerecord"
 gem "sqlite3"
 gem "rake"
 ```
 
-Now require it in your Sinatra application, and establish the database
+Now require it in your standalone application, and establish the database
 connection:
 
 ```ruby
-require "sinatra/activerecord"
+require "standalone/activerecord"
 
 set :database, "sqlite3:///foo.sqlite3"
 ```
 
 Alternatively, you can set the database with a hash or a YAML file. Take a look at
-[this wiki](https://github.com/janko-m/sinatra-activerecord/wiki/Alternative-database-setup).
+[this wiki](https://github.com/janko-m/standalone-activerecord/wiki/Alternative-database-setup).
 
-Note that in **modular** Sinatra applications you will need to first register
+Note that in **modular** standalone applications you will need to first register
 the extension:
 
 ```ruby
-class YourApplication < Sinatra::Base
-  register Sinatra::ActiveRecordExtension
+class YourApplication < standalone::Base
+  register standalone::ActiveRecordExtension
 end
 ```
 
 Now require the rake tasks and your app in your `Rakefile`:
 
 ```ruby
-require "sinatra/activerecord/rake"
+require "standalone/activerecord/rake"
 require "./app"
 ```
 
@@ -90,7 +88,7 @@ end
 ```
 
 You can put your models anywhere you want, only remember to require them if
-they're in a separate file, and that they're loaded after `require "sinatra/activerecord"`.
+they're in a separate file, and that they're loaded after `require "standalone/activerecord"`.
 
 Now everything just works:
 
@@ -119,7 +117,7 @@ end
 
 ## History
 
-This gem was made in 2009 by Blake Mizerany, creator of Sinatra.
+This gem was made in 2009 by Blake Mizerany, creator of standalone.
 
 ## Social
 
@@ -127,4 +125,4 @@ You can follow me on Twitter, I'm [@m_janko](http://twitter.com/m_janko).
 
 ## License
 
-[MIT](https://github.com/janko-m/sinatra-activerecord/blob/master/LICENSE)
+[MIT](https://github.com/janko-m/standalone-activerecord/blob/master/LICENSE)

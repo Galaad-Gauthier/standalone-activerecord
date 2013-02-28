@@ -2,7 +2,7 @@ require 'active_record'
 require 'active_support/core_ext/string/strip'
 require 'fileutils'
 
-module Sinatra
+module Standalone
   module ActiveRecordTasks
     extend self
 
@@ -56,4 +56,4 @@ module Sinatra
   end
 end
 
-load 'sinatra/activerecord/tasks.rake'
+load 'standalone/activerecord/tasks.rake'
